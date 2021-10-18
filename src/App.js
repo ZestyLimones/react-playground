@@ -1,6 +1,19 @@
 import React from 'react';
 import Split from './composition/Split';
 import './App.css';
+import Tooltip from './composition/Tooltip';
+
+const firstTooltip = (
+  <Tooltip message="tooltip message">
+    Some text would go here for the tooltip message
+  </Tooltip>
+);
+
+const secondTooltip = (
+  <Tooltip message="another tooltip message">
+    more tooltip messaging here for the second message
+  </Tooltip>
+);
 
 function App() {
   return (
@@ -9,6 +22,9 @@ function App() {
         This is the content for the left `Split`. Lorem ipsum dolor sit amet
         consectetur, adipisicing elit. Incidunt ex velit suscipit facere
         officia?
+        <br />
+        {/* make another tooltip directly inside the App */}
+        <Tooltip message="one more tooltip message">Necessitatibus?</Tooltip>
       </Split>
       <Split className="right">
         This is the content for the right `Split`. Inventore aliquid cupiditate
